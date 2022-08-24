@@ -113,8 +113,9 @@ img {
     color: var(--primary-background-color);
     background-color: var(--accent-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+
 
 }
 
@@ -730,11 +731,12 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .thumb::after {
     position: absolute;
     display: block;
+
     content: "";
     bottom: 0;
     height: 70px;
     width: 100%;
-    z-index: 1;
+    
     background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -743,7 +745,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: absolute;
     bottom: 27px;
     left: 107px;
-    z-index: 2;
+    z-index: 1;
 
     font-weight: var(--primary-font-weight);
     font-size: 14px;
@@ -880,6 +882,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
+
     position: fixed;
     top: 0;
     left: 0;
@@ -888,11 +891,14 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
     
     background-color: rgba(0, 0, 0, 0.2);
-
-
+   
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 .backdrop.is-hidden {
+   
     opacity: 0;
     pointer-events: none;
 }
@@ -912,8 +918,6 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
     background: var(--primary-background-color);
-
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  
 }
 
@@ -926,8 +930,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 50%;
     cursor: pointer;
     border: 0;
-    
-    
+
 }
 
 .close-svg {
